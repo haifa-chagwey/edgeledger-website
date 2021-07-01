@@ -22,8 +22,7 @@ window.addEventListener("scroll", function () {
 
 // smooth scrolling
 // $(document).ready(function () {
-// ken hatina el script tag mtaa js file fi west el head tag yelzem n7otha l'instruction hathika
-// besh ya9ra html file 9bal mayabda ya9ra js files
+
 $("#navbar a, .btn").on("click", function (event) {
   console.log(event);
   if (this.hash !== "") {
