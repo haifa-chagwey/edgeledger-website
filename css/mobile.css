@@ -1,0 +1,100 @@
+/* navbar */
+@media (max-width: 550px) {
+  #navbar {
+    flex-direction: column;
+    /* wenazidouha align-items: center property besh ijiw fel west ili hiya betbi3etha mawjouda */
+  }
+}
+/* showcase */
+#showcase #content {
+  padding: 0 1.5rem;
+}
+.l-heading {
+  font-size: 3rem;
+}
+.lead {
+  font-size: 1rem;
+}
+
+/* what */
+#what #items {
+  flex-direction: column;
+}
+#what #items .item {
+  padding: 1rem 0;
+}
+@media (min-width: 400px) {
+  #what #items .item {
+    display: flex;
+    text-align: left;
+  }
+  #what #items .item i {
+    margin-right: 1rem;
+    margin-bottom: 0;
+    align-self: center;
+    /* toul item fi toul item_text */
+  }
+}
+
+/* who */
+@media (max-width: 730px) {
+  #who {
+    display: block;
+    /* flex-direction: column; */
+    /* height: 900px; */
+  }
+  #who #who_img {
+    /* height: 400px; */
+    /* flex: none; */
+    display: none;
+  }
+  #who #who_text {
+    text-align: center;
+
+    /* flex: none; */
+  }
+  /* the img has disappear because we didn't assign a height to who div besh flex=1 te5dem*/
+  /* who_img wel who_text divs ma3andhomch nafs height 5ater who_text 3andha padding donc besh 
+  el calcul hatheka(flexbox and padding) hata itha na7ina padding ma3andhomch naf height 5ater
+  margim mta3 p h1 wel li 3andhom effet itha somme mte3hom fetet width aslani ma3adesh esh iwalliw
+  3andhom nafs el height */
+  /* if we assign a height to the who_img div it doesn't give us the expected height 5ater
+  flex=1  3andha priorite akber menha yelzem nzidha flex=none */
+}
+/* clients */
+
+#clients #items .item {
+  padding: 1rem;
+}
+@media (max-width: 550px) {
+  #clients #items {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #clients #items .item {
+    width: 30.3333%;
+    flex: none;
+  }
+
+  @media (max-width: 400px) {
+    #clients #items .item {
+      width: 45%;
+    }
+    #clients #items .item:last-child {
+      /* display: none; */
+    }
+  }
+}
+/* contact */
+@media (max-width: 450px) {
+  #contact {
+    display: block;
+  }
+  #contact #map {
+    display: none;
+  }
+  input[type="submit"] {
+    width: 100%;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+/* nav p {
+  font-size: 3rem;
+  color: brown;
+} */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+p {
+  margin: 1rem 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+/* utility classes */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.text_center {
+  text-align: center;
+}
+.text_primary {
+  color: #8fc451;
+}
+/* large */
+.l-heading {
+  font-size: 4rem;
+  margin-top: 60px;
+}
+/* medium  */
+.m-heading {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.lead {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  /* we have to remove the border when want to add this class to a button */
+  border: none;
+}
+/* button-color */
+.btn_transparent {
+  background-color: none;
+  color: #fff;
+  border: 1.5px solid #fff;
+  text-transform: uppercase;
+}
+.btn_dark {
+  background-color: #222;
+  color: #fff;
+}
+.btn_dark:hover {
+  background-color: rgb(24, 23, 23);
+}
+/* padding on the y axe: top and bottom */
+.py-1 {
+  padding: 1.5rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+/* padding on the y and x axes */
+.p-1 {
+  padding: 1.5rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+/* background-color */
+.bg-light {
+  background-color: #f4f4f4;
+  color: #222;
+}
+.bg-dark {
+  background-color: #222;
+  color: #fff;
+}
+.bg-primary {
+  background-color: #8fc451;
+  color: #fff;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  /* position: sticky;
+    top: 0; */
+  position: fixed;
+  width: 100%;
+  /* z-index: 1; */
+}
+#navbar ul {
+  display: flex;
+}
+#navbar ul li a {
+  color: #fff;
+  display: inline-block;
+  /* display: inline-block allows you to set a width and height on the element while display:
+  inline doesn't */
+  /* Also, with display: inline-block, the top and bottom margins/paddings are respected,
+   but with display: inline they are not. */
+  padding: 0.75rem 0;
+  width: 65px;
+  text-align: center;
+  border-radius: 10%;
+}
+#navbar ul li a:hover {
+  background-color: #8fc451;
+}
+
+/* #showcase */
+#showcase {
+  height: 100vh;
+  background-image: url("../img/showcase.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* the showcase content can be a flex item to the showcase and we center it horizontally 
+  and vertically, in that case we don't have to assign a height to it so we can center it
+   vertically in the showcase*/
+  /* showcase content properties; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+  /* or we case just add margin:auto property to showcase content */
+
+  /* fel cas mteena besh naamlou overlay donc yelzem height mtaa showcase content  ikoun 100% 
+   height of showcase  besh tkoun propriete mta3 justify-content:center aadha effet fel 7ala 
+   hethy h1, p, a besh ikounou houma flex items benesba le showcase content*/
+}
+
+#showcase #content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  /*vertical*/
+  justify-content: center;
+  text-align: center;
+  /*horizontal*/
+  align-items: center;
+  /*ken mana3malch align-items:center wen5alleha text-align center akahaw width mta3 h1, p, a 
+  besh ikoun 100% width mta3 showcase content 5ater el valeur par defaut mta3 align-items:stretch*/
+  color: #fff;
+  padding: 0 5rem;
+  /* overlay */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* position: absolute;
+  top: 0px;
+  left: 0; */
+}
+
+/* what */
+#items {
+  display: flex;
+}
+.item {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+#what #items .item i {
+  background-color: #8fc451;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* who */
+#who {
+  display: flex;
+}
+#who div {
+  flex: 1;
+}
+#who #who_img {
+  background: url("../img/people.jpg") no-repeat center/cover;
+}
+#who #who_text ul li {
+  border-bottom: 1px solid #333;
+  padding: 0.5rem 0;
+}
+
+img {
+  width: 100%;
+  display: inline-block;
+}
+
+/* Contact */
+#contact {
+  display: flex;
+}
+#contact #contact_form {
+  flex: 1;
+}
+#contact #map {
+  flex: 2;
+}
+#contact #contact_form .form_group {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-items are stretched by default (align-items:stretch) */
+  padding: 0.5rem;
+}
+#contact #contact_form .form_group label {
+  display: block;
+  font-weight: bold;
+}
+#contact #contact_form .form_group input,
+#contact #contact_form .form_group textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+input[type="submit"] {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
